@@ -43,7 +43,7 @@ extension parseClient {
                 var annotations = parseStudentLocation.convertStudentLocationsToAnnotations(locations)
                 completionHandler(result: annotations, error: nil)
             } else {
-                completionHandler(result: nil, error: nil)
+                completionHandler(result: nil, error: error)
             }
         }
     }
