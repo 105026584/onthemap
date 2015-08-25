@@ -544,17 +544,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <visualEffectView hidden="YES" opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTR-Zz-BVG">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="85k-ti-JDt">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        </view>
-                                        <blurEffect style="dark"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                        </variation>
-                                    </visualEffectView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -572,7 +561,6 @@
                                         <exclude reference="N6i-g7-SAz"/>
                                         <exclude reference="Vpb-e3-Mhw"/>
                                         <exclude reference="1Q9-nz-ypT"/>
-                                        <exclude reference="eTR-Zz-BVG"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="9yD-FO-PZb"/>
@@ -590,7 +578,6 @@
                                         <include reference="N6i-g7-SAz"/>
                                         <include reference="Vpb-e3-Mhw"/>
                                         <include reference="1Q9-nz-ypT"/>
-                                        <include reference="eTR-Zz-BVG"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="9yD-FO-PZb"/>
@@ -690,6 +677,17 @@
                                     <action selector="submitPosition:" destination="FZ8-Eq-rJQ" eventType="touchUpInside" id="7fc-AH-Ovd"/>
                                 </connections>
                             </button>
+                            <visualEffectView hidden="YES" opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTR-Zz-BVG">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="85k-ti-JDt">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                            </visualEffectView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dAu-lA-UXO">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                 <color key="color" cocoaTouchSystemColor="darkTextColor"/>
@@ -726,6 +724,7 @@
                                 <exclude reference="4Tg-Pa-mm4"/>
                                 <exclude reference="fcC-JV-1BJ"/>
                                 <exclude reference="AUi-Wv-y0y"/>
+                                <exclude reference="eTR-Zz-BVG"/>
                                 <exclude reference="dAu-lA-UXO"/>
                             </mask>
                             <mask key="constraints">
@@ -759,6 +758,7 @@
                                 <include reference="4Tg-Pa-mm4"/>
                                 <include reference="fcC-JV-1BJ"/>
                                 <include reference="AUi-Wv-y0y"/>
+                                <include reference="eTR-Zz-BVG"/>
                                 <include reference="dAu-lA-UXO"/>
                             </mask>
                             <mask key="constraints">

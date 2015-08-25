@@ -112,6 +112,9 @@ class PostInformationViewController: UIViewController, MKMapViewDelegate, UIText
             self.mapView.removeAnnotations(self.mapView.annotations)
         }
         
+        blurEffect.hidden = false
+        activityIndicator.startAnimating()
+        
         var localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = searchText.text
         var localSearch = MKLocalSearch(request: localSearchRequest)
@@ -120,6 +123,8 @@ class PostInformationViewController: UIViewController, MKMapViewDelegate, UIText
                 //nothing found, show alert
                 var alert = UIAlertView(title: nil, message: "Place not found", delegate: self, cancelButtonTitle: "Try again")
                 alert.show()
+                self.blurEffect.hidden = true
+                self.activityIndicator.stopAnimating()
                 return
             } else {
                 //place found, zoom to location and place annotation
@@ -148,7 +153,8 @@ class PostInformationViewController: UIViewController, MKMapViewDelegate, UIText
                 
                 self.bottomWebView.alpha = CGFloat(0.1)
                 self.cancelButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-                
+                self.blurEffect.hidden = true
+                self.activityIndicator.stopAnimating()
             }
         }
     }
